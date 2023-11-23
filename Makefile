@@ -64,8 +64,6 @@ up:
 
 .PHONY: run
 run:
-	$(eval DELETE_FILE = $(shell if [ -f ./.env-ui ]; then echo "false"; else echo "true"; fi))
-	@if [ -f ./.env-ui ]; then echo "false"; else touch ./.env-ui; fi
 	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_FILE="Dockerfile" $(DOCKER_COMPOSE_CMD) up -d api pending_publisher
 	@if [ $(DELETE_FILE) = "true" ] ; then rm ./.env-ui; fi
 
