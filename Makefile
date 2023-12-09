@@ -64,7 +64,7 @@ up:
 
 .PHONY: run
 run:
-	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_FILE="Dockerfile" $(DOCKER_COMPOSE_CMD) up -d api pending_publisher
+	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_FILE="Dockerfile" $(DOCKER_COMPOSE_CMD) up -d api
 	@if [ $(DELETE_FILE) = "true" ] ; then rm ./.env-ui; fi
 
 .PHONY: run-arm

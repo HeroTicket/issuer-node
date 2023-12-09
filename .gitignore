@@ -32,3 +32,5 @@ tools/changelog/changelog.md
 # vendor/
 
 .DS_STORE
+
+infrastructure/local/db
